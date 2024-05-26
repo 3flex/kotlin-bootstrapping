@@ -20,10 +20,11 @@ jobs:
         make intellij-community
         make kotlin
 
-    - name: Build
-      run: |
-        unset JAVA_HOME
-        make
+    - name: IntelliJ 133
+      run: make build/intellij-community-133
+
+    - name: Kotlin 0.6.786
+      run: make build/kotlin-0.6.786
 
     - name: Report
       run: tree -s -h --du build/kotlin*
