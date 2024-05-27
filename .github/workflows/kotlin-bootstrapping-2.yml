@@ -12,6 +12,7 @@ jobs:
     - name: Configure Java
       run: |
         sudo update-java-alternatives --set java-1.8.0-openjdk-amd64
+        unset JAVA_HOME
         java -version
 
     - name: Fetch sources
