@@ -19,8 +19,6 @@ jobs:
       run: |
         git clone https://github.com/ebourg/kotlin-bootstrapping .
 
-    - run: make init
-
     - name: Checkout IntelliJ 133
       uses: actions/checkout@v4
       with:
@@ -29,9 +27,6 @@ jobs:
         filter: tree:0
         fetch-tags: true
         fetch-depth: 0
-
-    - name: IntelliJ 133
-      run: make build/intellij-community-133
 
     - name: Checkout Kotlin 
       uses: actions/checkout@v4
@@ -42,8 +37,7 @@ jobs:
         fetch-tags: true
         fetch-depth: 0
 
-    - name: Kotlin 0.6.2338
-      run: make build/kotlin-0.6.2338
+    - run: make
 
     - name: Report
       run: tree -s -h --du build/kotlin*
