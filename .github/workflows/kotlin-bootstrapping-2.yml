@@ -27,6 +27,7 @@ jobs:
         repository: JetBrains/intellij-community
         path: intellij-community
         ref: 133
+        fetch-tags: true
 
     - name: IntelliJ 133
       run: make build/intellij-community-133
@@ -37,6 +38,7 @@ jobs:
         repository: JetBrains/kotlin
         path: kotlin
         ref: build-0.6.786
+        fetch-tags: true
 
     - name: Kotlin 0.6.2338
       run: make build/kotlin-0.6.2338
