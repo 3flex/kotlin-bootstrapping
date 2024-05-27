@@ -19,6 +19,12 @@ jobs:
       run: |
         git clone https://github.com/ebourg/kotlin-bootstrapping .
 
+    - uses: actions/cache@v4
+      with:
+        path: |
+          build
+        key: ${{ hashFiles('Makefile') }}
+
     - name: Checkout IntelliJ 133
       uses: actions/checkout@v4
       with:
