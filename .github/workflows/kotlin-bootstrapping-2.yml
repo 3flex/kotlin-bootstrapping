@@ -23,6 +23,7 @@ jobs:
       with:
         path: |
           build
+          dependencies
         key: ${{ hashFiles('Makefile') }}
 
     - name: Checkout IntelliJ 133
