@@ -26,7 +26,7 @@ jobs:
       with:
         repository: JetBrains/intellij-community
         path: intellij-community
-        ref: 133
+        filter: tree:0
 
     - name: Fetch IntelliJ tags
       run: git fetch --tags
@@ -40,7 +40,7 @@ jobs:
       with:
         repository: JetBrains/kotlin
         path: kotlin
-        ref: build-0.6.786
+        filter: tree:0
 
     - name: Fetch Kotlin tags
       run: git fetch --tags
