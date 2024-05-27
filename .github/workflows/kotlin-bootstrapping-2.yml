@@ -19,6 +19,8 @@ jobs:
       run: |
         git clone https://github.com/ebourg/kotlin-bootstrapping .
 
+    - run: make init
+
     - name: Checkout IntelliJ 133
       uses: actions/checkout@v4
       with:
