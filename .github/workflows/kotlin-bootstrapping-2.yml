@@ -17,11 +17,22 @@ jobs:
     - name: Fetch sources
       run: |
         git clone https://github.com/ebourg/kotlin-bootstrapping .
-        make intellij-community
         make kotlin
+
+    - name: Checkout IntelliJ 133
+      uses: actions/checkout@v4
+      with:
+        repository: JetBrains/intellij-community
+        ref: 133
 
     - name: IntelliJ 133
       run: make build/intellij-community-133
+
+    - name: Checkout Kotlin 
+      uses: actions/checkout@v4
+      with:
+        repository: JetBrains/kotlin
+        ref: 0.6.786
 
     - name: Kotlin 0.6.786
       run: make build/kotlin-0.6.786
