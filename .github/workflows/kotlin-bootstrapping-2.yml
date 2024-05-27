@@ -28,10 +28,6 @@ jobs:
         path: intellij-community
         filter: tree:0
 
-    - name: Fetch IntelliJ tags
-      run: git fetch --tags
-      working-directory: ./intellij-community
-
     - name: IntelliJ 133
       run: make build/intellij-community-133
 
@@ -41,10 +37,6 @@ jobs:
         repository: JetBrains/kotlin
         path: kotlin
         filter: tree:0
-
-    - name: Fetch Kotlin tags
-      run: git fetch --tags
-      working-directory: ./kotlin
 
     - name: Kotlin 0.6.2338
       run: make build/kotlin-0.6.2338
