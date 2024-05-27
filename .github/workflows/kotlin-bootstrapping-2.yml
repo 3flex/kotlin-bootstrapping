@@ -28,6 +28,7 @@ jobs:
         path: intellij-community
         filter: tree:0
         fetch-tags: true
+        fetch-depth: 0
 
     - name: IntelliJ 133
       run: make build/intellij-community-133
@@ -39,6 +40,7 @@ jobs:
         path: kotlin
         filter: tree:0
         fetch-tags: true
+        fetch-depth: 0
 
     - name: Kotlin 0.6.2338
       run: make build/kotlin-0.6.2338
