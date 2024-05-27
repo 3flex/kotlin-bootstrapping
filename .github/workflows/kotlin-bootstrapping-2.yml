@@ -17,7 +17,6 @@ jobs:
     - name: Fetch sources
       run: |
         git clone https://github.com/ebourg/kotlin-bootstrapping .
-        make kotlin
 
     - name: Checkout IntelliJ 133
       uses: actions/checkout@v4
