@@ -36,7 +36,7 @@ jobs:
       with:
         repository: JetBrains/kotlin
         path: kotlin
-        ref: 0.6.786
+        ref: build-0.6.786
 
     - name: Kotlin 0.6.786
       run: make build/kotlin-0.6.786
