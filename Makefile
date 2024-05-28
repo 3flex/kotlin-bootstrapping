@@ -4,7 +4,7 @@
 
 .PHONY: bootstrap init clean
 
-bootstrap: init build/kotlin-1.0.0
+bootstrap: init build/kotlin-1.1.0
 
 init:
 	mkdir -p build dependencies
